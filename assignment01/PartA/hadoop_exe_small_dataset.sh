@@ -1,14 +1,8 @@
-javac -classpath $HADOOP_HOME/hadoop-core-0.20.203.0.jar -d classes src/edu/duke/cs/AverageTemperature.java 
-
-jar -cvf jar/AverageTemperature.jar -C classes/ .
-
-hadoop fs -rmr ~/PartA_input
-hadoop fs -mkdir ~/PartA_input
-hadoop dfs -copyFromLocal data/sample.txt ~/PartA_input/
+jar -cvf jar/AverageTemperature.jar -C bin/ .
 
 hadoop fs -rmr ~/PartA_output
 
-hadoop jar jar/AverageTemperature.jar edu/duke/cs/AverageTemperature  ~/PartA_input/sample.txt ~/PartA_output
+hadoop jar jar/AverageTemperature.jar edu/duke/cs/AverageTemperatureDriver  ~/PartA_input/sample.txt ~/PartA_output
   
 hadoop fs -lsr ~/PartA_output
 	  

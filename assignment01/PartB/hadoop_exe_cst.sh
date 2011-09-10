@@ -2,10 +2,6 @@ javac -classpath $HADOOP_HOME/hadoop-core-0.20.203.0.jar -d classes src/edu/duke
 
 jar -cvf jar/WordCount.jar -C classes/ .
 
-hadoop fs -rmr ~/PartB_input
-hadoop fs -mkdir ~/PartB_input
-hadoop dfs -copyFromLocal data/* ~/PartB_input/
-
 hadoop fs -rmr ~/PartB_output
 
 hadoop jar jar/WordCount.jar edu/duke/cs/WordCount  ~/PartB_input/customer.dat ~/PartB_output

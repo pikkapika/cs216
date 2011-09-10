@@ -20,6 +20,10 @@ public class WordCount {
 		private Text word = new Text();
 
 		@Override
+		/**
+		 * (K1, V1) = (line#, line)
+		 * (K2, V2) = (word, 1)
+		 */
 		public void map(LongWritable key, Text value, Context context)
 				throws IOException, InterruptedException {
 
@@ -37,6 +41,12 @@ public class WordCount {
 			Reducer<Text, IntWritable, Text, IntWritable> {
 
 		@Override
+		/**
+		 * (K2, V2) = (word, # of the word)
+		 * (K3, V3) = (word, # of the word)
+		 * 
+		 * It can be used as reducer
+		 */
 		public void reduce(Text key, Iterable<IntWritable> values,
 				Context context) throws IOException, InterruptedException {
 
