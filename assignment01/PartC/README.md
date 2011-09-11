@@ -74,7 +74,9 @@ If I use job chain of mapper/reducer, I have to wait previous result. However, m
 As for (iv), I chose to use meeting location since I thought some rooms can be used only for VIP.
 I grep Obama in (iv-ii) result. The following is the result.
 
+
 ki13@rack162:PartC$ hadoop fs -cat ~/PartC_output/SortWhiteHouseVisitorVisiteeMeetingPlaceDriver/part-* | grep -i Obama
+
 1	BRANDZEL,BENJAMIN,I,OBAMA,BARACK,WH,MAP ROOM
 1	GERLACH,JOHN,A,OBAMA,BARACK,WH,MAP ROOM
 1	GROSSMAN,DAVID,B,OBAMA,BARACK,WH,MAP ROOM
@@ -83,7 +85,9 @@ ki13@rack162:PartC$ hadoop fs -cat ~/PartC_output/SortWhiteHouseVisitorVisiteeMe
 
 (WH, MAP ROOM) seems very limited place. Then I grep it in the same file.
 
+
 ki13@rack162:PartC$ hadoop fs -cat ~/PartC_output/SortWhiteHouseVisitorVisiteeMeetingPlaceDriver/part-* | grep -i "WH,MAP ROOM"
+
 1	BOWEN,JANET,C,FLOTUS,,WH,MAP ROOM
 1	BRANDZEL,BENJAMIN,I,OBAMA,BARACK,WH,MAP ROOM
 1	CLAYTON,LAUREN,L,POTUS,,WH,MAP ROOM
