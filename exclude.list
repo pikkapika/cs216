@@ -1,0 +1,15 @@
+./assignment1/parta/data/1901
+./assignment1/parta/data/1901-1902
+./assignment1/parta/data/1902
+./assignment1/parta/data/sample.txt
+./assignment1/parta/data/sample_maldata.txt
+./assignment1/parta/hadoop_dataload.sh
+./assignment1/partb/data/customer.dat
+./assignment1/partb/data/sample.txt
+./assignment1/partb/data/web_sales.dat
+./assignment1/partb/hadoop_dataload.sh
+./assignment1/partc/data/sample.txt
+./assignment1/partc/data/WhiteHouse-Key.csv
+./assignment1/partc/data/WhiteHouse-Key.xlsx
+./assignment1/partc/data/WhiteHouse-WAVES-Released-0827.csv
+./assignment1/partc/hadoop_dataload.sh
