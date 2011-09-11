@@ -13,6 +13,7 @@ Koichi Ishida: pikkapika@gmail.com
 The purpose of this application is to analyse WhiteHouse Visitor input file.
 
 (i) The 10 most frequent visitors (NAMELAST, NAMEFIRST, NAMEMID) to the White House. 
+
 * First step by WhiteHouseVisitorDriver
   * (K1, V1) = (line#, line value)
   * (K2, V2) = (Text(NAMELAST, NAMEFIRST, NAMEMID), 1)
@@ -24,6 +25,7 @@ The purpose of this application is to analyse WhiteHouse Visitor input file.
 	* no reducer
 
 (ii) The 10 most frequently visited people (visitee_namelast, visitee_namefirst) in the White House. 
+
 * First step by WhiteHouseVisiteeDriver
   * (K1, V1) = (line#, line value)
   * (K2, V2) = (Text(visitee_namelast, visitee_namefirst), 1)
@@ -36,6 +38,7 @@ The purpose of this application is to analyse WhiteHouse Visitor input file.
 	* no reducer
 
 (iii) The 10 most frequent visitor-visitee combinations. 
+
 * First step by WhiteHouseVisitorAndVisiteeDriver
   * (K1, V1) = (line#, line value)
   * (K2, V2) = (Text(MEETING_LOC, MEETING_ROOM), 1)
@@ -49,16 +52,18 @@ The purpose of this application is to analyse WhiteHouse Visitor input file.
 
 (iv) Some other interesting statistic that you can think of. (Please refer value for (K1,V1)(K2,V2) at source code and others)
 (iv-i) The 10 most frequent meeting location.
+
 * First step by WhiteHouseMeetingPlaceDriver
 * Second step by SortDriver
 
 (iv-ii) The 10 most frequent visitor-visitee, and meeting location combination.
+
 * First step by WhiteHouseVisitorVisiteeMeetingPlaceDriver
 * Second step by SortDriver
 
 ## Execution
-./hadoop_dataload.sh
-./hadoop_suit_exe.sh
+* ./hadoop_dataload.sh
+* ./hadoop_suit_exe.sh
 
 Please take a look at the inside of shell for more detail
 
