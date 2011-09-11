@@ -22,7 +22,7 @@ The following is key and value pair for mapper, combiner and reducer.
 * (K3, V3) = (year, temperature of the line, the number of samples)
 
 ## Execution
-./hadoop_dataload.sh
-./hadoop_suit_exe.sh
+  ./hadoop_dataload.sh
+  ./hadoop_suit_exe.sh
 
 Please take a look at the inside of shell for more detail
