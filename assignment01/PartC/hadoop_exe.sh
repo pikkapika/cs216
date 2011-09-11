@@ -1,12 +1,16 @@
-javac -classpath $HADOOP_HOME/hadoop-core-0.20.203.0.jar -d classes src/edu/duke/cs/WhiteHouseVisitorMining.java 
+if [ $# -ne 3 ] ; then
+	echo "command input_filename output_dir classname"
+	echo "e.g.) hadoop_exe.sh sample.txt PartC_output"
+	exit
+fi
 
-jar -cvf jar/WhiteHouseVisitorMining.jar -C classes/ .
+jar -cvf jar/WhiteHouse.jar -C bin/ .
 
-hadoop fs -rmr ~/PartC_output
+hadoop fs -rmr ~/$2
 
-hadoop jar jar/WhiteHouseVisitorMining.jar edu/duke/cs/WhiteHouseVisitorMining  ~/PartC_input/WhiteHouse-WAVES-Released-0827.csv ~/PartC_output
+hadoop jar jar/WhiteHouse.jar edu/duke/cs/$3  ~/PartC_input/$1 ~/$2
   
-hadoop fs -lsr ~/PartC_output
+hadoop fs -lsr ~/$2
 	  
-hadoop fs -cat ~/PartC_output/part-r-00000
+hadoop fs -cat ~/$2/part-*
 
