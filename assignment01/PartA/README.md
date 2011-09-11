@@ -24,7 +24,7 @@ After the mapper finish its job, combiner which is AverageTemperatureReducer is 
 * (K3, V3) = (year, temperature of the line, the number of samples)
 
 ## Execution
-./hadoop_dataload.sh
-./hadoop_exe.sh 1901-1902 PartA_output
+* ./hadoop_dataload.sh
+* ./hadoop_exe.sh 1901-1902 PartA_output
 
 Please take a look at the inside of shell for more detail
