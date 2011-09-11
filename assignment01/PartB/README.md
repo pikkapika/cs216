@@ -16,10 +16,10 @@ The main program is called by WordCountDriver using WordCountMapper for mapper a
 The following is key and value pair for mapper, combiner and reducer.
 
 * (K1, V1) = (line#, line value)
-* (K2, V2) = (year, temperature of the line, 1)
+* (K2, V2) = (word, 1)
 
-* (K2, V2) = (year, temperature of the line, the number of samples)
-* (K3, V3) = (year, temperature of the line, the number of samples)
+* (K2, V2) = (word, the number of samples)
+* (K3, V3) = (word, the number of samples)
 
 ## Execution
   ./hadoop_dataload.sh
